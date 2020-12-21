@@ -1,0 +1,374 @@
+https://docs.google.com/spreadsheets/d/1ZLSAh2AwiU5RW2B8xbmqe1WghzvOWCj426UThbgn7og/edit?usp=sharing
+
+
+https://drive.google.com/drive/folders/1AOhHrZV5ZUweBtMjGHgFXC6OyYabXcaz?usp=sharing
+
+
+https://www.thecodingguys.net/tutorials/csharp/csharp-tutorial
+
+
+/*
+Steps to Make a shared assembly
+
+- Generate the key pair
+      sn -k file1.snk
+ 
+- Sign the assembly with a "key pair"
+     Assembly properties 
+
+- Give the assembly "strong name"
+      Build your assembly 
+
+- Install the assembly into the GAC (Global Assembly Cache)
+      gacutil /i Asm1.Dll
+
+
+-----------------------------------------------------------
+      gacutil /u <name-of-assembly> ---------------will uninstall it from Gac
+
+before .net version 4 - c:\windows\assembly
+version 4 onwards  - C:\Windows\Microsoft.NET\assembly\gac_msil ----check it by searching it in the start menu
+
+
+
+
+
+To do the above steps:-
+---------------------------
+-Create a new project using VS---Open cmd prompt(Run as Administrator)---select a directory of where to generate the key value pair key---type 'sn -k file1.snk' ---now goto/change directory in cli of where the assembly was made(if in same then do nothing)---
+
+-Goto properties---Tick 'Sign the assembly'---Select <Browse> (we are not selecting <New> because it internally calls the above command for for generating the key pair)---
+
+-Select the file1.snk where it is saved (this completes our step 2)---Now Build the project from top bar, this automatically gives our assembly a strong name---
+
+-Now for 4th step goto 'cd bin\debug' (the .dll assembly is created in it)---type 'gacutil /i <name-of-assembly>.dll'
+
+-Thus in the above way, we install the memory in the GAC (to uninstall it 'gacutil /u <name-of-assembly>.dll'
+
+-Now Create a new project/assembly from VS---In Solution Explorer----Right click on 'References'---Add Reference---Browse---Select the assembly created above in <name-of-assembly>\bin\debug\<name-of-assembly>.dll---Add---OK---After Reference is added in SE---Right Click on it---select Properties(a menu will be opened)---make Copy Local as False---
+-----this means VS by default creats a copy of that assembly in itself by default and says that you to copy this assembly in the clients machine in GAC and it will work there also
+
+Hence in the above main code....we are taking and compiling the code which is taken from shared assembly----while creating a shared assembly----as we have created a copy of it----we can still change the content inside the method or class and run it successfully, but not the method itself.
+*/
+
+
+
+
+DAY 12:
+
+WPF :-
+
+Windows Presentation Foundation----internally it is using DirectX drivers and for drawing on the screen it is using GPU (Graphics Processing Unit) insted of the CPU
+
+Create a new project---below search in the 3 columns above select C#, Windows, Desktop---select WPF App (.NET Framework)---Next
+
+
+
+Now goto MainWindows.xaml---open Toolbox from View---When we drag & drop from toolbox then it creats an object of that component inside the container i.e Grid
+
+Goto on top in View-> Other Windows-> Properties Window---the prerequsite of Accessing a control is to give a Name(if we don't then we won't be able to access it)---as soon as we give it a name, it will be added in the Grid section with other properties---now click the Start button to run the program
+
+Now On the right side of name in Properties window Click on Event(thunder button)---double click in 'Click' section---it will take you to the MainWindows.xaml.cs file(Similar thing happens when you double click on the button itself)---by doing this in .xaml in Grid section it adds
+
+Now in MainWindows.xaml.cs we have to add the logic of what happens when we click on the button
+
+
+
+
+
+Now to add a new form---Right Click to the Project---Add---Window(WPF)
+---goto App.xaml and in StartupUri, change the name of it to which project to start(Window1.xaml) in our case---select 'Labels' and 'Textboxs' and a button---we can rename then in the Grid section in the bottom in Content
+
+
+
+Note: if by mistake we double click on the input box then a component will be generated in the Windows1.xaml.cs file----if we delete this now it try to run it, then it will give an error---this is because an additional component in the Windows1.xaml Grid section a property is formed called TextChanged is added---we need to delete that inorder to run it
+
+
+
+WpfApp1:-
+
+Windows3.xaml.cs:-
+
+Now from Toolbox select ListBox---Drag and drop it to window---now open Properties---open Common---in Items row select '...'( Note: Items is a collection of Items Elements )---a pop up will open---from the bottom select ListBox ---click Add---scroll down---in Content type 'A' for eg----The the checking is done to add values in ListBox--
+Remove that ListBox---Double Click on that blank window---Properties will Open---scroll to see 'Loaded' in it---Double click on its input---a new tab will open---Now go back to the previous tab---double click on the ListBox---in the bottom file with Grid section will open---in the <ListBox x:Name=" "---
+give any name eg <ListBox x:Name="lstNames"---now go to its codeing tab MainWindows.xaml.cs which we opened---inside the 'private void Window_Loaded(object sender, RoutedEventArgs e){}---put lstNames. ---now as Items is a collection remember Count, Remove, Add---type lstNames.Items.Add("Virat");---Now place a button just like ListBox---Double click on it---see what to write on Windows3.xaml.cs--
+
+
+Now Double click on ListBox again---Now we want a property called 'SelectionMode'---in Properties---below is Arrange by: ---select Category in it by drop down--select Name ---scroll down to see where it is ---in that if we Select Single--then in ListBox we will be able to select only single object---in Multiple---we can select Multiple object---in Extended we can select by dragging over--
+
+
+Now as we click/select an object in the ListBox and press 'Properties of the ListBox' we want its index and values should be displayed of all the values selected---for that we write a for each loop---see the Windows.xaml.cs file for more--
+
+
+
+* Just like Grid section we have StackPanel section. If we drag and drop any element, it puts it in stack pattern(one above/below) another--
+* In WrapPanel, if there is n enough space left it automatically puts that element in the next line
+* In DockPanel, if we drag/drop the elements are placed in any one of the edges if its property LastChildFill is True, if false then it places it in Left (by default on the Left)
+
+
+
+File:- ReflectionExample
+
+Suppose a Net salary of an employee is to be calculated....suddenly the employee is transfered to an another place eg US, UK and a different Calculator is to be used for calculating the salay of that employee.
+Therefore to use the same Calculator we needed same object with same entities. Suppose we want this should be defined at run time in the system of which calculator to use. For this we use reflection.
+Therefore we want here to load the assembly, create an object, setup an object, call that method/object at run time which can be done using Reflection
+
+
+==============================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+Day 14:
+
+Refer Diagram for below:-
+
+80's
+- ODBC - Open Database Connectivity (this needed to provided with drivers by the Database provider (FE -> ODBC <- DB))
+- DAO/RDO(Front End) - Data Access Object/Remote Data Object library
+
+90's
+- OLE-DB - Object Linking and Embedding Database(provider of ole-db drivers to database (FE -> OLE-DB -> DB))
+- ADO(Front End) - Activex Data Objects
+
+When .NET framework was introduced:-
+
+- Managed Provider for ___ Database - The DB provider needed to provide this to connect with front end (FE -> .NET Code -> MPDB <- DB)
+
+- If No MPDB provided from DB Provider then - (MP for ODBC -> OLE-DB -> DB) and for ODBC (MP for ODBC -> OLE-DB <- DB)
+
+- Therefore for .NET Framework the MPDB for eg. SQL we will use 'System.Data.SqlClient.SqlConnection' library for Connection with DB with 'System.Data.SqlClient.SqlCommnd'
+
+
+
+-Imp - The SQL DataReader is a FireHose Cursor(means only in one direction). 
+	 - It is a Connected(means connection needs to be kept opened while reading records), 
+	 - Read only(only required for reading the records), 
+	 - Forward only(can only read in an order or direction and cannot go back to prev record) set of records.
+	 
+	
+	
+
+-If we are not using the DataReader which is only for a particular database and insted using DataSet(Common for all DB)/ DataTable(forms when a SELECT Query is fired) then:-
+
+-A DataSet is a Disconnected (need not to be kept connected all the time (while working) but should be only connected when the data is fetched from it) XML set of records. Any updates made in the DB will not sync as it is disconnected but we can work on it. Therefore the sync while the DB is connected is done by the DataAapter. How?
+
+-DataAapter - while the DataSet is initialized then it first countionusly 'Fills' the DB (in a DataTable)(it has a function called Fill()) and then it 'Updates'.
+
+
+
+
+Why we need a DataView?
+=> In a DataTable after it is created, by the use of SELECT Query, further sorting of data is not possible. For doing so, we require a DataView.
+
+
+DataView - The DataView is based on a single DataTable(One DataView is for one DataTable, hence multiple DataViews for multiple DataTable). 
+		 - It has the same structure as the DataTable(Rows and Columns). 
+		 - Changes made in the DataTable reflect in the DataView and vice versa i.e Changes made in the DataView reflect back in the DataTable. 
+		 - A DataTable can have multiple DataViews. 
+		 
+		 
+		 
+
+
+
+DatabaseExamples:-
+
+To Create DB:-
+
+From top View---goto Other Windows---select Server Explorer---right click on Database Connections---if creating DB for the 1st time then select 'Create New SQL Server Database'---if already done before do 'Add Connection'---
+---put server name as(localdb)\MsSqlLocalDb --- DB name as JKDec20---OK
+
+Now on left---drop down the DB---right click on Tables---Add a New Table---now edit the given UI---In Name column give DeptNo, DeptName---In Allow Nulls Column untick all---In the bottom query will be automatically generated---In CREATE TABLE [dbo].[Table], here change Table to Departments---above Name Column of UI---click Update---a pop-up will come---click Update Database--
+--will display Update completed successfully---Similarly create an Employee Table with same parameters---now open MainWindows.xaml for further steps
+
+
+In case if the database connection is lost from there then---rigth click Data Connections in server Explorer---Add Connection---put in the SQL server and DB name as before---Test Connection---OK
+
+Now to change the Data Source Name---right click Data Connections---Add Connection---in Data Source---click Change---select Microsoft SQL Server Database File---OK---a pop up appears asking for the file name--
+---if 1st time---click Browse---select where to be saved---Give a name to it---OK---Yes---Through this now we will be able to copy the databse to the other machines---In this the difference is the name of the path which is generated---
+
+
+===============================================================================================================================================================================================================================================================================================================
+
+
+
+LINQ - Objects
+
+It is a common object that is used for the connection with DataSet, XML and SQL
+
+
+
+=================================================================================================================================================================
+
+Day 16:
+
+
+Web Apps
+
+FirstApplication:-
+
+Create a new project---Filter in the above 3 columns---C#, Windows, Web ---Scroll for Asp.net Web Application(.NET Framework) ---Next---Give name---Next---in the right Tick MVC---select MVC---Next
+---Now in the Controller---right click---Add---Controller---Empty Controller---Add---(Scaffolding comes which means some pre-requsite code is written in it)---
+
+
+
+
+
+All Controllers inherit from Controllers interface
+
+Here you will see in the Solution Explorer---web.config file----it is simalar to app.config file---
+
+
+
+
+
+ModalBindingAndDbCode:-
+
+//A view that uses a Model is called a strongly typed view---
+
+//To add a model---right click on Modal---Add---New Item---Class---Give a name---Add---as the solution is build now add a controller
+//right click Controller---Add---Controller---click MVC 5 Controller with read/write actions (a controller with methods written)---Add---Give name EmployeeController---Add---a controller with methods written will be created---
+
+
+Now in the EmployeeController---right click Details---MVC 5 View---Add---View Name: Details---Template: Details--by this we are using Scaffolding or getting pre-requisite code---
+
+Hence, 
+Details--will display all the values from the Employee based on some para--
+Edit--will show is the existing Employee with text boxes and allow us to change the values for that Employee--
+Create--Add an Employee--
+Delete--Delete an Employee--
+List--will show us all the Employee--
+
+Now Select Model class: Employee {ModalBindingAndDbCode} after Building the app first otherwise it is not added---Now do the same for all the methods in the EmployeesController---
+--Here for Index @modal is IEnumerable---
+
+
+
+
+
+
+
+Storing state
+1)-ViewData ViewData is derived from the ViewDataDictionary class and is a Dictionary object where Keys are String while Values will be objects.
+
+-While retrieving the data it needs to be Type Cast to its original type
+-ViewData is used for passing value from Controller to View
+-ViewData is available only for Current Request. value lost on a request redirect
+
+
+
+Usage In Controller:-
+
+Emp obj1 = new Emp();
+ViewData["key1"] = obj1;
+ViewData["s"] = "aaa";
+ViewData["i"] = 1000;
+
+
+In View:-
+
+@{
+Emp obj1 = (Emp)ViewData["key1"] 
+string s  = ViewData["s"].ToString();
+int i = (int)ViewData["i"];
+}
+
+
+
+
+2)ViewBag - 
+-ViewBag is a Wrapper built around ViewData. (Internally it stores ViewData)
+-Dynamic Object
+-While retrieving, there is no need for Type Casting data
+
+ViewBag.Prop1 = value;
+
+@ViewBag.Prop1
+
+
+TO DO:-
+ViewData & ViewBag will work from controller to view...but not from one model to another...try to make it work
+
+
+
+
+
+3)TempData
+TempData is derived from the TempDataDictionary class and is a Dictionary object(Key, Value) where Keys are String while Values will be objects.
+While retrieving the data it needs to be Type Cast to its original type 
+TempData is available for Current Request. It will not be destroyed on redirection.
+
+
+
+TO DO:-
+try using TempData
+
+
+
+Between requests
+4) QueryString (passed values is stored in the url)
+
+
+
+-A session is when a client passes a its 1st request
+-A session starts when the client sends any request to the server eg. Entering a register page
+-A session is stored in a session cookie which is sent to the server
+-A session timeout is when no request was set by the client in an alloted time
+-The session time is stored in a session variable. This variable will be there before session timeout. 
+
+-The session ends when 1) The session timeouts, 2) Write code to end the session(Session.Abandon, 3) When the application ends.
+
+  
+
+
+5) Session Variables:-
+
+Will be Available throughout the Session....as long as the sessionis there
+Session["key"] = value;
+
+
+-to store value....
+ Session["i"] = 100;
+
+-To read value....
+ int i = (int)Session["i"];
+
+
+
+
+6) Application variables(common data for all users or more than one user)
+Available across sessions
+System.Web.HttpContext.Current.Application["Name"] = "Value";
+
+
+
+7) Cookies
+HttpCookie objCookie = new HttpCookie("ChocoChip");
+
+objCookie.Expires = DateTime.Now.AddDays(1); -----------------------for cookies to end according to the user
+objCookie.Value = "a";
+
+//objCookie.Values["key1"] = "a";
+//objCookie.Values["key2"] = "b";
+
+Response.Cookies.Add(objCookie);
+
+
+
+-read a cookie
+ HttpCookie objCookie = Request.Cookies["ChocoChip"];
+
+//null if not present
+
+string s;
+s = objCookie.Value;
+s = objCookie.Values["key1"];
+
+
+
+
+
+
+
+
+
+
