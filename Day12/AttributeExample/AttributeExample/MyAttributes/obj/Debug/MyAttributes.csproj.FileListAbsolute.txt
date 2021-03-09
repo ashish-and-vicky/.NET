@@ -1,0 +1,12 @@
+C:\Vikram\DotNet\AttributeExample\MyAttributes\bin\Debug\MyAttributes.dll
+C:\Vikram\DotNet\AttributeExample\MyAttributes\bin\Debug\MyAttributes.pdb
+C:\Vikram\DotNet\AttributeExample\MyAttributes\obj\Debug\MyAttributes.csprojAssemblyReference.cache
+C:\Vikram\DotNet\AttributeExample\MyAttributes\obj\Debug\MyAttributes.csproj.CoreCompileInputs.cache
+C:\Vikram\DotNet\AttributeExample\MyAttributes\obj\Debug\MyAttributes.dll
+C:\Vikram\DotNet\AttributeExample\MyAttributes\obj\Debug\MyAttributes.pdb
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\bin\Debug\MyAttributes.dll
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\bin\Debug\MyAttributes.pdb
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\obj\Debug\MyAttributes.csprojAssemblyReference.cache
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\obj\Debug\MyAttributes.csproj.CoreCompileInputs.cache
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\obj\Debug\MyAttributes.dll
+D:\Dump\AttributeExample\AttributeExample\MyAttributes\obj\Debug\MyAttributes.pdb
