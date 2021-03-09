@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="My First Window" Height="330.248" Width="460.722">
+    <Grid> <!--it is a layout which holds the controls here-->
+        <Label x:Name="lblMessage" Content="Label" HorizontalAlignment="Left" Margin="58,48,0,0" VerticalAlignment="Top" ContextMenuClosing="lblMessage_ContextMenuClosing"/>
+        <Button x:Name="btnShowMessage" Content="Show Message" HorizontalAlignment="Left" Margin="58,122,0,0" VerticalAlignment="Top" Width="155" Click="btnShowMessage_Click"/>
+
+    </Grid>
+</Window>
