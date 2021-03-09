@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day5\Generics\bin\Debug\Generics.exe.config
+D:\Trainings\JKDec20\Day5\Generics\bin\Debug\Generics.exe
+D:\Trainings\JKDec20\Day5\Generics\bin\Debug\Generics.pdb
+D:\Trainings\JKDec20\Day5\Generics\obj\Debug\Generics.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day5\Generics\obj\Debug\Generics.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day5\Generics\obj\Debug\Generics.exe
+D:\Trainings\JKDec20\Day5\Generics\obj\Debug\Generics.pdb

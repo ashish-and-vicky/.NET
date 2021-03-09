@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day4\Interfaces\bin\Debug\Interfaces.exe.config
+D:\Trainings\JKDec20\Day4\Interfaces\bin\Debug\Interfaces.exe
+D:\Trainings\JKDec20\Day4\Interfaces\bin\Debug\Interfaces.pdb
+D:\Trainings\JKDec20\Day4\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day4\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day4\Interfaces\obj\Debug\Interfaces.exe
+D:\Trainings\JKDec20\Day4\Interfaces\obj\Debug\Interfaces.pdb

@@ -1,0 +1,14 @@
+D:\Trainings\JKDec20\Day5\CollectionsExample\bin\Debug\CollectionsExample.exe.config
+D:\Trainings\JKDec20\Day5\CollectionsExample\bin\Debug\CollectionsExample.exe
+D:\Trainings\JKDec20\Day5\CollectionsExample\bin\Debug\CollectionsExample.pdb
+D:\Trainings\JKDec20\Day5\CollectionsExample\obj\Debug\CollectionsExample.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day5\CollectionsExample\obj\Debug\CollectionsExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day5\CollectionsExample\obj\Debug\CollectionsExample.exe
+D:\Trainings\JKDec20\Day5\CollectionsExample\obj\Debug\CollectionsExample.pdb
+E:\DAC\.NET\Notes\Day5\CollectionsExample\bin\Debug\CollectionsExample.exe.config
+E:\DAC\.NET\Notes\Day5\CollectionsExample\bin\Debug\CollectionsExample.exe
+E:\DAC\.NET\Notes\Day5\CollectionsExample\bin\Debug\CollectionsExample.pdb
+E:\DAC\.NET\Notes\Day5\CollectionsExample\obj\Debug\CollectionsExample.csprojAssemblyReference.cache
+E:\DAC\.NET\Notes\Day5\CollectionsExample\obj\Debug\CollectionsExample.csproj.CoreCompileInputs.cache
+E:\DAC\.NET\Notes\Day5\CollectionsExample\obj\Debug\CollectionsExample.exe
+E:\DAC\.NET\Notes\Day5\CollectionsExample\obj\Debug\CollectionsExample.pdb

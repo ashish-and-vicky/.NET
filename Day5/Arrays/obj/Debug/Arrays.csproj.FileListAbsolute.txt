@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day5\Arrays\bin\Debug\Arrays.exe.config
+D:\Trainings\JKDec20\Day5\Arrays\bin\Debug\Arrays.exe
+D:\Trainings\JKDec20\Day5\Arrays\bin\Debug\Arrays.pdb
+D:\Trainings\JKDec20\Day5\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day5\Arrays\obj\Debug\Arrays.exe
+D:\Trainings\JKDec20\Day5\Arrays\obj\Debug\Arrays.pdb
+D:\Trainings\JKDec20\Day5\Arrays\obj\Debug\Arrays.csprojAssemblyReference.cache

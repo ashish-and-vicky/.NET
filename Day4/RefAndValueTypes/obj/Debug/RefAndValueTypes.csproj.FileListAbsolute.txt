@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\bin\Debug\RefAndValueTypes.exe.config
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\bin\Debug\RefAndValueTypes.exe
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\bin\Debug\RefAndValueTypes.pdb
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\obj\Debug\RefAndValueTypes.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\obj\Debug\RefAndValueTypes.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\obj\Debug\RefAndValueTypes.exe
+D:\Trainings\JKDec20\Day4\RefAndValueTypes\obj\Debug\RefAndValueTypes.pdb
