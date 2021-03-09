@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApplication1.Window4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window4" Height="300" Width="300">
+    <DockPanel Name="dockPanel1" LastChildFill="True" >
+        <Button DockPanel.Dock="Top">B1</Button>
+        <Button DockPanel.Dock="Bottom">B2</Button>
+        <Button>B3</Button>
+        <Button DockPanel.Dock="Right">B4</Button>
+        <Button>B5</Button>
+
+    </DockPanel>
+</Window>
