@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\bin\Debug\TestSharedAssembly.exe.config
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\bin\Debug\TestSharedAssembly.exe
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\bin\Debug\TestSharedAssembly.pdb
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\obj\Debug\TestSharedAssembly.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\obj\Debug\TestSharedAssembly.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\obj\Debug\TestSharedAssembly.exe
+D:\Trainings\JKDec20\Day12\TestSharedAssembly\obj\Debug\TestSharedAssembly.pdb
