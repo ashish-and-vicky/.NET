@@ -1,0 +1,6 @@
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\bin\Debug\JKSharedAssembly.dll
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\bin\Debug\JKSharedAssembly.pdb
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\obj\Debug\JKSharedAssembly.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\obj\Debug\JKSharedAssembly.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\obj\Debug\JKSharedAssembly.dll
+D:\Trainings\JKDec20\Day12\JKSharedAssembly\obj\Debug\JKSharedAssembly.pdb
