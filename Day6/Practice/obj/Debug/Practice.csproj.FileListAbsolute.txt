@@ -1,0 +1,7 @@
+E:\DAC\.NET\Notes\Day6\Practice\bin\Debug\Practice.exe.config
+E:\DAC\.NET\Notes\Day6\Practice\bin\Debug\Practice.exe
+E:\DAC\.NET\Notes\Day6\Practice\bin\Debug\Practice.pdb
+E:\DAC\.NET\Notes\Day6\Practice\obj\Debug\Practice.csprojAssemblyReference.cache
+E:\DAC\.NET\Notes\Day6\Practice\obj\Debug\Practice.csproj.CoreCompileInputs.cache
+E:\DAC\.NET\Notes\Day6\Practice\obj\Debug\Practice.exe
+E:\DAC\.NET\Notes\Day6\Practice\obj\Debug\Practice.pdb

@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\bin\Debug\AnonMethodsAndLambdas.exe.config
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\bin\Debug\AnonMethodsAndLambdas.exe
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\bin\Debug\AnonMethodsAndLambdas.pdb
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\obj\Debug\AnonMethodsAndLambdas.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\obj\Debug\AnonMethodsAndLambdas.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\obj\Debug\AnonMethodsAndLambdas.exe
+D:\Trainings\JKDec20\Day8\AnonMethodsAndLambdas\obj\Debug\AnonMethodsAndLambdas.pdb
