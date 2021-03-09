@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day11\ReflectioExample\bin\Debug\ReflectioExample.exe.config
+D:\Trainings\JKDec20\Day11\ReflectioExample\bin\Debug\ReflectioExample.exe
+D:\Trainings\JKDec20\Day11\ReflectioExample\bin\Debug\ReflectioExample.pdb
+D:\Trainings\JKDec20\Day11\ReflectioExample\obj\Debug\ReflectioExample.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day11\ReflectioExample\obj\Debug\ReflectioExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day11\ReflectioExample\obj\Debug\ReflectioExample.exe
+D:\Trainings\JKDec20\Day11\ReflectioExample\obj\Debug\ReflectioExample.pdb
