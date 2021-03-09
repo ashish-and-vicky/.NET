@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\bin\Debug\ClientForWS.exe.config
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\bin\Debug\ClientForWS.exe
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\bin\Debug\ClientForWS.pdb
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\obj\Debug\ClientForWS.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\obj\Debug\ClientForWS.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\obj\Debug\ClientForWS.exe
+D:\Trainings\JKDec20\Websites\WebServiceExample\ClientForWS\obj\Debug\ClientForWS.pdb
