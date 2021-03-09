@@ -1,0 +1,7 @@
+E:\DAC\.NET\Notes\Day3\Interfaces\bin\Debug\Interfaces.exe.config
+E:\DAC\.NET\Notes\Day3\Interfaces\bin\Debug\Interfaces.exe
+E:\DAC\.NET\Notes\Day3\Interfaces\bin\Debug\Interfaces.pdb
+E:\DAC\.NET\Notes\Day3\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+E:\DAC\.NET\Notes\Day3\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+E:\DAC\.NET\Notes\Day3\Interfaces\obj\Debug\Interfaces.exe
+E:\DAC\.NET\Notes\Day3\Interfaces\obj\Debug\Interfaces.pdb

@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day2\ClassBasics\bin\Debug\ClassBasics.exe.config
+D:\Trainings\JKDec20\Day2\ClassBasics\bin\Debug\ClassBasics.exe
+D:\Trainings\JKDec20\Day2\ClassBasics\bin\Debug\ClassBasics.pdb
+D:\Trainings\JKDec20\Day2\ClassBasics\obj\Debug\ClassBasics.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day2\ClassBasics\obj\Debug\ClassBasics.exe
+D:\Trainings\JKDec20\Day2\ClassBasics\obj\Debug\ClassBasics.pdb
+D:\Trainings\JKDec20\Day2\ClassBasics\obj\Debug\ClassBasics.csprojAssemblyReference.cache

@@ -1,0 +1,6 @@
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\bin\Debug\AccessSpecifiers.dll
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\bin\Debug\AccessSpecifiers.pdb
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\obj\Debug\AccessSpecifiers.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\obj\Debug\AccessSpecifiers.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\obj\Debug\AccessSpecifiers.dll
+D:\Trainings\JKDec20\Day2\AccessSpecifiers\obj\Debug\AccessSpecifiers.pdb
