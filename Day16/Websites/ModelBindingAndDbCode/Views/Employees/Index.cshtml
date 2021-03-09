@@ -1,0 +1,55 @@
+﻿<!--Here for Index it is IEnumerable which means it is taking a collection of objects. Therefore in controller we need to pass codes based on collection-->
+@model IEnumerable<ModelBindingAndDbCode.Models.Employee>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Basic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptNo)
+        </th>
+        <th></th>
+    </tr>
+    <!--This foreach loop is responsible for diaplaying all the values on the webpage-->
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Basic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeptNo)
+            </td>
+            <td>
+                <!--Now here we have done this because we want that when we click Edit or Details in the browser while we build this, we want that a EmpNo as id shall be passed in the url i.e GET request because we only require an id--><!--eg. Edit of what? Answer=>Of this id, Details of what? Answer=>Of this id,Delete of what? Answer=>Of this id-->
+                @Html.ActionLink("Edit", "Edit", new { EmpNo = item.EmpNo }) |
+                @Html.ActionLink("Details", "Details", new { EmpNo = item.EmpNo }) |
+                @Html.ActionLink("Delete", "Delete", new { EmpNo = item.EmpNo })
+            </td><!--The 1st para here is the text (Edit here) which will be shown in the GET/url, 2nd is the Name of the method it is representing in the controller called the ActionName and 3rd is the para in the bracket is the root value of anonymous type-->
+        </tr>
+    }
+
+</table>
