@@ -1,0 +1,14 @@
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.exe.config
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.exe
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.pdb
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.exe
+D:\Trainings\JKDec20\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.pdb
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.csprojAssemblyReference.cache
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.csproj.CoreCompileInputs.cache
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.exe
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\obj\Debug\WorkingWithThreads.pdb
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.exe.config
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.exe
+E:\DAC\.NET\Notes\Day10\WorkingWithThreads\bin\Debug\WorkingWithThreads.pdb

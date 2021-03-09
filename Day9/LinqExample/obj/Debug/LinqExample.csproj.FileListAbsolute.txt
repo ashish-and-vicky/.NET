@@ -1,0 +1,7 @@
+D:\Trainings\JKDec20\Day9\LinqExample\bin\Debug\LinqExample.exe.config
+D:\Trainings\JKDec20\Day9\LinqExample\bin\Debug\LinqExample.exe
+D:\Trainings\JKDec20\Day9\LinqExample\bin\Debug\LinqExample.pdb
+D:\Trainings\JKDec20\Day9\LinqExample\obj\Debug\LinqExample.csprojAssemblyReference.cache
+D:\Trainings\JKDec20\Day9\LinqExample\obj\Debug\LinqExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JKDec20\Day9\LinqExample\obj\Debug\LinqExample.exe
+D:\Trainings\JKDec20\Day9\LinqExample\obj\Debug\LinqExample.pdb
