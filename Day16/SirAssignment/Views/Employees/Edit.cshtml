@@ -1,0 +1,67 @@
+﻿@model ModelBindingAndDbCode.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<!--In EditorFor, the values are only displayed with submit button-----when we press that submit button, it sends a request for POST method as mentioned in the Controller-->
+<!--The values EmpNo, Name, Basic, DeptNo are being initialized 1st by the values we have given, and then those values are given back to the controller, as these objects are being passed back to line number 1 Employee object. Hence line no 1 Employee is being read by the EmployeesController(in EmployeesController.cs line number 70 2nd para of the function and passed to the collection)-->
+<!--In short, the values(EmpNo, Name, Basic, DeptNo) from here are passed to .Employee in line no 1, then it is read by the eg Edit get request, then the post request method of Edit is passing the values to EmpNo, Name, Basic, DeptNo, which is then read by Line no 1, and line no 1's Employee is being read by the controller and stored in objEmp parameter-->
+<!--The values which are inside the form, will only be received in the Employee and then in the collection-->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Employee</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmpNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <!--LabelFor being used here GET-->
+                @Html.EditorFor(model => model.EmpNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EmpNo, "", new { @class = "text-danger" })
+            </div><!--EditorFor being used here SET/POST--><!--Here the value of EmpNo is comming to EditorFor i.e the text box and sent to the Employee object in the top and frm there to objEmp. This is called to 'Model Binding  or  Two Way Binding'-->
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Basic, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Basic, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Basic, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeptNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeptNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeptNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
