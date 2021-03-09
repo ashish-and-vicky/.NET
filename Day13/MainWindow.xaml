@@ -1,0 +1,18 @@
+﻿<Window x:Class="ControlEgs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlEgs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid> <!--Here we have created a very special type of button which consists of an image with text in it-->
+        <Button Margin="57,56,35,56">
+            <StackPanel>
+                <Label HorizontalAlignment="Center">Hello</Label>
+                <Image Name="image1" Stretch="Fill" Source="001.Jpg" Height="33" VerticalAlignment="Top" StretchDirection="Both" />
+                <Label HorizontalAlignment="Center">Hello</Label>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
