@@ -55,6 +55,57 @@ My SQL cursors are read only and non scrollable
 
 2) Explicit Cursor - Explicit Cursors are Created by Users whenever the user requires them. Explicit Cursors are used for Fetching data from Table in Row-By-Row Manner.
 
+How to create Explicit Cursor:
+
+Declare Cursor Object.
+Syntax : DECLARE cursor_name CURSOR FOR SELECT * FROM table_name
+
+eg. DECLARE s1 CURSOR FOR SELECT * FROM studDetails
+
+
+
+Open Cursor Connection.
+Syntax : OPEN cursor_connection
+eg. OPEN s1
+
+
+
+Fetch Data from cursor.
+
+There are total 6 methods to access data from cursor. They are as follows :
+
+FIRST is used to fetch only the first row from cursor table.
+
+LAST is used to fetch only last row from cursor table.
+
+NEXT is used to fetch data in forward direction from cursor table.
+
+PRIOR is used to fetch data in backward direction from cursor table.
+
+ABSOLUTE n is used to fetch the exact nth row from cursor table.
+
+RELATIVE n is used to fetch the data in incremental way as well as decremental way.
+
+
+
+Syntax : FETCH NEXT/FIRST/LAST/PRIOR/ABSOLUTE n/RELATIVE n FROM cursor_name
+
+FETCH FIRST FROM s1
+FETCH LAST FROM s1
+FETCH NEXT FROM s1
+FETCH PRIOR FROM s1
+FETCH ABSOLUTE 7 FROM s1
+FETCH RELATIVE -2 FROM s1
+
+
+Close cursor connection.
+Syntax : CLOSE cursor_name
+eg. CLOSE s1
+
+
+Deallocate cursor memory.
+Syntax : DEALLOCATE cursor_name
+eg. DEALLOCATE s1
 
 
 
