@@ -1,0 +1,123 @@
+Grid - 
+to sow the data from the data source of sql connection on html web page.
+
+
+View state - 
+It store the value of a variable. Whenever a page is reloaded after a round trip the instance gets lost. So to receive that instance without the use of serve.
+Disadavantage is it is not secure.
+
+State management - 
+As web app are stateless, it is the process  of maintaining states of values between muliple request of pages
+
+- Client side
+1) Hidden fields - Does not reload the page whenever any change is happining in the backend. It also can be accessed in other pages also. eg . increment of Counter when a button is clicked
+
+2) Query String - It is used to pass the value from one page to another through URL. The value is collected using the QueryString[""] from the variable set in the URL. Similar to subjects in Angular
+
+- Server side
+1) Sessions - 
+To maintain the instance of the present session we create it by writing 'session' in front of that variable
+
+to destroy session - Session.Abandon() or after 20 mins automatically
+
+
+
+User control - 
+
+1) It is used for increasing the reusability by capturing the data. eg. selecting a date in the calander.
+2) Its extension is ascx and that of a web form is aspx
+3) Its decorator starts from @Control and cannot have html, head, body elements & that of a normal web form statrs from @Page which have <html>, <head>, <body>.
+
+
+
+
+Function Call - 
+
+1) Call by Value - only the value of the variable gets changed
+2) Call by Reference - The value of the variable gets changed as it changes of where the value is stored in the memory 
+
+
+
+
+Cusrsor - (Declare, Open, Fetch, Close)
+
+Allows to iterate a set of rows returned by a query.
+
+We create cusror inside a stored procedure handle the result set returned by the query
+
+My SQL cursors are read only and non scrollable
+
+
+
+Triggers - 
+ Triggers are the SQL codes that are automatically executed in response to certain events on a particular table. These are used to maintain the integrity of data.
+ 
+ eg. Create trigger sample_trigger
+ before Insert
+ on student
+ FOR EACH ROW
+ SET new.marks = new.marks + 6;
+ 
+ 
+ 
+ Dynamic SQL - 
+ it a SQL build from strings at runtime.
+ 
+ eg. 
+ Declare @sql nvarchar(1000)
+ Declare @prams nvarchar(1000)
+ 
+ Set @sql = "Select * from Employees where FirstName = @FirstName" and LastName = @LastName"
+ Set @params = @FirstName nvarchar(100), @LastName nvarchar(100)"
+ 
+ Execute sp_execute @sql, @params, @FirstName = "Ben", @LastName="Hstings"
+ 
+ 
+ Functions - 
+ It is similar to procedure but this returns value.
+ 
+ We can call a procedure from a function but not vice versa.
+ 
+ eg. Create or Replace Function total custs
+ Return number
+ IS
+ total number(2) = 0;
+ Begin
+	Select Count(*) into total
+	From Customers;
+Return total;
+END
+ 
+ Procedure - 
+ Can perform an action but cannot return a value.
+ 
+ eg. create procedure [database-name].[procedure-name]
+ asbegin
+ select * from country
+ end
+ go
+ 
+ 
+ 
+ View - 
+ virtual tables
+ 
+ used for hiding the complexity and only showing the values
+ 
+ Not stored in th DB but in the query object
+ 
+ 
+Indexes - 
+Used to speed up query
+
+1) Primary Indexes
+	a) Dense - No. of entities in index table is same as No. of Entities in Main Table
+	b) Sparse - No. of entities in index table is not equal to No. of Entities in Main Table
+
+2) Clustering - 
+
+muliple entities pointing to a single entity.
+
+3) Secondary - 
+
+one single entity pointing to another single entity which further points to a group of entities.
