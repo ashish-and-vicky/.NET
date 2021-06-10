@@ -123,7 +123,7 @@ Triggers -
  ------------------------------------------------------------------------------------------------------------
  eg.2
  
- Alter TRIGGER [dbo].[trigger_EmployeeTarget_3ndJune] ON [dbo].[EmployeeTarget_2ndJune]
+Alter TRIGGER [dbo].[trigger_EmployeeTarget_3ndJune] ON [dbo].[EmployeeTarget_2ndJune]
 AFTER UPDATE
 AS
 BEGIN TRY
