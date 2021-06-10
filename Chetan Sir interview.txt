@@ -112,11 +112,192 @@ eg. DEALLOCATE s1
 Triggers - 
  Triggers are the SQL codes that are automatically executed in response to certain events on a particular table. These are used to maintain the integrity of data.
  
- eg. Create trigger sample_trigger
+ eg.1
+ 
+ Create trigger sample_trigger
  before Insert
  on student
  FOR EACH ROW
  SET new.marks = new.marks + 6;
+ 
+ ------------------------------------------------------------------------------------------------------------
+ eg.2
+ 
+ Alter TRIGGER [dbo].[trigger_EmployeeTarget_3ndJune] ON [dbo].[EmployeeTarget_2ndJune]
+AFTER UPDATE
+AS
+BEGIN TRY
+UPDATE EmployeeTarget_2ndJune  SET salary = salary + 500  WHERE empName = 'Amrita';
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+------------------------------------------------------------------------------------------------------------
+
+eg.3
+
+--Insert trigger
+CREATE TRIGGER [dbo].[tr_tb1Employee_forInsert_3ndJune] ON [dbo].[Employee_3ndJune]
+FOR INSERT
+AS
+BEGIN TRY
+DECLARE @ID INT
+SELECT @ID=ID FROM INSERTED
+INSERT INTO tb1EmployeeAudit_3ndJune VALUES(
+'New Employee with id = '+CAST(@ID AS VARCHAR(5))+ '  IS ADDED AT '+CAST(GETDATE() AS varchar(60))
+);
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+----------------------------------------------------------------------------------------------------------
+
+eg.4
+
+--DELETE TRIGGERS
+CREATE TRIGGER [dbo].[tr_tb1Employee_forDelete_3ndJune] ON [dbo].[Employee_3ndJune]
+FOR DELETE
+AS
+BEGIN TRY
+DECLARE @ID INT
+SELECT @ID=ID FROM DELETED
+INSERT INTO tb1EmployeeAudit_3ndJune VALUES(
+'Employee with id = '+CAST(@ID AS VARCHAR(5))+ '  is deleted at '+CAST(GETDATE() AS varchar(60))
+);
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+eg.5
+
+--UPDATE TRIGGERS
+CREATE TRIGGER [dbo].[tr_tb1Employee_forUpdate_3ndJune] ON [dbo].[Employee_3ndJune]
+FOR UPDATE
+AS
+BEGIN TRY
+DECLARE @NAME VARCHAR(50)
+DECLARE @NEW_SALARY INT , @OLD_SALARY INT
+
+SELECT @NEW_SALARY=SALARY , @NAME=NAME FROM INSERTED
+SELECT @OLD_SALARY=SALARY FROM DELETED
+
+INSERT INTO tb1EmployeeAudit_3ndJune VALUES(
+'Salary of '+@NAME+ ' was changed to '+CAST(@NEW_SALARY AS varchar(10))+' from '+CAST(@OLD_SALARY AS VARCHAR(10))
+);
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+----------------------------------------------------------------------------------------------------------------------
+
+eg.6
+
+--inserted
+CREATE TRIGGER [dbo].[tr_tb1Employee_inserteddTable_3ndJune] ON [dbo].[Employee_3ndJune]
+FOR INSERT
+AS
+BEGIN TRY
+SELECT * FROM INSERTED
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+---------------------------------------------------------------------------------------------------------------------
+
+eg.7
+
+--inserted and deleted
+CREATE TRIGGER [dbo].[tr_tb1Employee_InseredAndDeleted_3ndJune] ON [dbo].[Employee_3ndJune]
+FOR UPDATE
+AS
+BEGIN TRY
+SELECT * FROM DELETED
+SELECT * FROM INSERTED
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+update Employee_3ndJune set gender='Female',salary=10000 , age=21, deptId=3 where id=6  
+
+------------------------------------------------------------------------------------------------------------
+
+eg.8
+
+--Create trigger
+CREATE TRIGGER tr_DDL_CreateTable_3ndJune ON database
+FOR CREATE_TABLE
+AS
+BEGIN TRY
+PRINT 'New Table Created !!'
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+-----------------------------------------------------------------------------------------------------------9
+
+eg.9
+
+--Alter  trigger
+CREATE TRIGGER tr_DDL_AlterTable_3ndJune ON database
+FOR ALTER_TABLE
+AS
+BEGIN TRY
+PRINT 'You have just Altered a table !!'
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+------------------------------------------------------------------------------------------------------------
+
+eg.10
+
+--Drop trigger
+CREATE TRIGGER tr_DDL_DropTable_3ndJune ON database
+FOR DROP_TABLE
+AS
+BEGIN TRY
+PRINT 'You have just Dropped a table !!'
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+------------------------------------------------------------------------------------------------------------
+
+eg.11
+
+--Multiple event in single trigger
+CREATE TRIGGER tr_DDL_3ndJune ON database
+FOR CREATE_TABLE , ALTER_TABLE , DROP_TABLE
+AS
+BEGIN TRY
+PRINT 'You have just Created , Altered or Dropped a table !!'
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+------------------------------------------------------------------------------------------------------------
+
+eg.12
+
+create table demo_3rdJune(id int);
+alter table demo_3rdJune add name varchar(50);
+drop table demo_3rdJune;
+select * from demo_3rdJune;
+------------------------------------------------------------------------------------------------------------
+
+
+
  
  
  
@@ -151,11 +332,59 @@ END
  Procedure - 
  Can perform an action but cannot return a value.
  
- eg. create procedure [database-name].[procedure-name]
- asbegin
+ eg.1 create procedure [database-name].[procedure-name]
+ as begin
  select * from country
  end
  go
+ ------------------------------------------------------------------------------------------------------------
+ 
+ eg.2 
+
+create table Employee_5thJune
+(
+empId int primary key IDENTITY ,
+empName varchar(100),
+gender varchar(10),
+salary int,
+age int,
+doj date 
+);
+
+select * from Employee_5thJune;
+
+------------------------------------------------------------------------------------------------------------
+eg.3 
+
+Alter procedure sp_GetSalary_Employee_4thJune
+@name varchar(50)
+as 
+begin
+update Employee_4thJune set salary = salary+5000  WHERE  empName = 'Amrita'
+end
+
+------------------------------------------------------------------------------------------------------------
+eg.4
+
+create  proc spGetEmployee5thJuneByGender
+@Gender VARCHAR(50),
+@EmployeeCount int Output
+AS 
+BEGIN
+select @EmployeeCount = Count(empId) from Employee_5thJune where gender = @Gender
+END
+
+
+Declare @TotalEmployee int 
+Declare @gen = 'Female'
+EXEC spGetEmployee5thJuneByGender @gen , @TotalEmployee output
+select @TotalEmployee as Female_Employee
+
+------------------------------------------------------------------------------------------------------------
+
+
+--drop proc sp_GetSalary_Employee_4thJune
+ ------------------------------------------------------------------------------------------------------------
  
  
  
