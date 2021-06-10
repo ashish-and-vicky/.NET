@@ -454,8 +454,11 @@ Used to speed up query
 
 Muliple entities pointing to a single entity. 
 
-	a) Clustered Index - An Index having some extra columns added(If more that one column is added in that index, then it is called as a composite clustered index). A clustered index determines the physical order of data in a table. For this reason a table have only one clustered index.
-	b) Non-Clustered - It has seperate Index and data. When it is created and displayed, it shows a seperate data table apart from the original table. We can create many non-clustered in one Table.
+	a) Clustered Index - An Index having some extra columns added(If more that one column is added in that index, then it is called as a composite clustered index).
+	A clustered index determines the physical order of data in a table. For this reason a table have only one clustered index.
+	
+	b) Non-Clustered - It has seperate Index and data. When it is created and displayed, it shows a seperate data table apart from the original table.
+	We can create many non-clustered in one Table.
 
 3) Secondary - 
 
