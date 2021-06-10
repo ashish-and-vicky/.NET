@@ -319,6 +319,51 @@ select * from demo_3rdJune;
  
  We can call a procedure from a function but not vice versa.
  
+ 
+* SQL Server supports two types of functions - 
+1) User-Defined function: User-defined functions are create by a user.
+	
+ 
+	SQL Server supports two types of user-defined functions:
+		1) Table-Valued Functions - 
+			In this type of function, we select a table data using a user-created function. A function is created using the Create function SQL command.
+			
+			eg. Create function Fun_EmployeeInformation()      
+				returns table       
+				as      
+				return(select * from Employee)
+				
+				
+				
+		2) Scalar Valued Functions - 
+			Now we are getting an Employee table with two different data joined and displayed in a single column data row.
+			
+			eg. Create function fnGetEmpFullName
+				(
+					@FirstName varchar(50),
+					@LastName varchar(50)
+				)
+				returns varchar(101)
+				As
+				Begin return (Select @FirstName + ' '+ @LastName);
+				end
+				
+				
+				
+			Calling the above function - 
+				- Select dbo.fnGetEmpFullName(FirstName,LastName) as Name, Salary from Employee
+
+  
+			
+ 
+2) System Defined Function: System functions are built-in database functions. 
+ eg. Aggregate Function - 
+		select max(salary) as Salary from employee 
+		
+		
+ 
+ MYSQL Syntax:
+ 
  eg. Create or Replace Function total custs
  Return number
  IS
@@ -405,7 +450,10 @@ Used to speed up query
 
 2) Clustering - 
 
-muliple entities pointing to a single entity.
+Muliple entities pointing to a single entity. 
+
+	a) Clustered Index - A clustered index determines the physical order of data in a table. For this reason a table have only one clustered index.
+	b) Non-Clustered - It has seperate Index and data. We can create many non-clustered in one Table.
 
 3) Secondary - 
 
