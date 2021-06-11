@@ -29,6 +29,9 @@ User control -
 3) Its decorator starts from @Control and cannot have html, head, body elements & that of a normal web form statrs from @Page which have <html>, <head>, <body>.
 
 
+eg.
+
+<%@ Control Language="#C" AutoEventWireup="true" CodeFile="FileUploader.ascx.cs" Inherits="FileUploader" %>
 
 
 Function Call - 
@@ -463,3 +466,254 @@ Muliple entities pointing to a single entity.
 3) Secondary - 
 
 one single entity pointing to another single entity which further points to a group of entities.
+
+
+
+
+
+
+Moment.js - 
+
+command  - npm install moment
+is a free open source JS library that removes the need to use the native JavaScript Date object directly.
+
+todaydate = moment();
+
+getData(){
+	console.log(this.todaydate);
+}
+
+
+
+
+OR
+
+
+todaydate = new Date();
+result;
+
+
+getData(){
+	this.result = moment(this.todaydate).format('dddd')
+	console.log(this.todaydate);
+}
+
+
+OR
+
+
+this.result = moment(this.todaydate).substract(1, 'hour').format('MMMM Do yyy, hh:mm')
+
+OR
+
+moment.format('MMMM Do YYYY, h:mm:ss a'); //May 05th 2021, 7:20:52 PM
+
+
+
+
+
+
+Postback - 
+IsPostBack is a page level property that can be used to determine weather the page is being loaded in response to a client postback, or if it is being loaded and accessed for the first time.
+It is used for not retaining the data of that page or not retaining the viewstate of that page whenever a request/event is fired.
+
+
+
+
+Row Number - 
+
+To display the row in the sequence of number we use row number
+
+eg.1 select *, ROW_NUMBER () OVER (Order by Price ASC) As RN from <table_name>
+
+eg.2 select *, ROW_NUMBER() OVER (PARTITION BY Category ORDER BY Price) As Rn FROM <table_name>
+
+
+
+SQL Query in TypeORM - 
+
+import {Not} from "typeorm";
+.
+.
+.
+.
+const loadedPosts = await connection.getRepository(Post).find({
+    title: Not("About #1")
+})
+
+
+
+import {getRepository} from "typeorm";
+
+const userRepository = getRepository(User);
+const user = await userRepository.findOne(1);
+
+
+
+
+
+
+const firstUser = await connection
+    .getRepository(User)
+    .createQueryBuilder("user")
+    .where("user.id = :id", { id: 1 })
+    .getOne();
+	
+	
+	
+import {getRepository} from "typeorm";
+.
+.
+.
+.
+const user = await getRepository(User)
+    .createQueryBuilder("user")
+    .where("user.id = :id", { id: 1 })
+    .getOne();
+	
+	
+	
+	
+Interfaces - 
+
+eg.1
+
+interface Idata{
+	fName: string,
+	lName: string
+	hello: () => string
+}
+
+var Stud: Idata = {
+	fName: "shubham",
+	lName: "naik"
+	hello: (): string => {return "Good Morning"}
+	
+}
+
+console.log(Stud.fName + Stud.lName)
+
+
+
+eg.2
+
+interface KeyPair {
+    key: number;
+    value: string;
+}
+
+let kv1: KeyPair = { key:1, value:"Steve" }; // OK
+
+let kv2: KeyPair = { key:1, val:"Steve" }; // Compiler Error: 'val' doesn't exist in type 'KeyPair'
+
+let kv3: KeyPair = { key:1, value:100 }; // Compiler Error: 
+
+
+
+
+Class & Interface Difference - 
+
+A class can be instantiated i.e, objects of a class can be created.                An Inteface cannot be instantiated i.e, objects cannot be created.
+
+Classes does not support multiple inheritance.                                     Inteface supports multiple inheritance.
+
+It can be inherit another class.												   It cannot inherit a class.
+
+It can be inherited by another class using the keyword ‘extends’.                  It can be inherited by a class by using the keyword ‘implements’ and it can be inherited by an interface using the keyword ‘extends’.
+
+
+
+The TypeScript compiler does not convert interface to JavaScript. It uses interface for type checking. This is also known as "duck typing" or "structural subtyping.
+
+
+
+
+Life Cycle of ASP.NET - 
+
+PreInit - raised after the start stage is complete and before the initialization begins. IsPostBack is determined.
+
+Init - Raised when control is initialized. Init event of control occurs before init event of page.
+
+InitComplete - Raised after the initialization of page. View state is not loaded.
+
+PreLoad - in this the ViewState is loaded. Also loads the postback data.
+
+Load - Firstly Page calls the Onload method on page object. Recursively OnLoad for each control is invoked.
+
+Control Events - Used to handle specific controls.
+
+LoadComplete - Loads all events on that particular page.
+
+PreRender - Raised after the Page object has created all controls that are required inorder to render the page.
+
+PreRenderComplete -  Raised after each data bound control whose DataSourceID property is set calls DataBind method.
+
+SaveStateComplete - Raised after the view state and control state has been saved for the page and for controls.
+
+Render - This is not an event; insted, at this stage of processing, the Page object calls this method on each control.
+
+Unload - page controls will be unloaded from the stack memory.
+
+
+
+
+Injectable in Angular - used in services either root level or component level.
+
+import { Injectable } from '@angular/core';
+import { HEROES } from './mock-heroes';
+
+@Injectable({
+  // declares that this service should be created
+  // by the root application injector.
+  providedIn: 'root',
+})
+export class HeroService {
+  getHeroes() { return HEROES; }
+}
+
+
+
+
+forEach loop in TS - this is faster that for loop because it does not look for condition all the time.
+
+let num = [7, 8, 9];
+
+num.forEach(function (value) {
+  console.log(value);
+});  
+
+
+
+
+var names = new Array("Mary", "Tom", "Jack", "Jill");
+
+var names = ["Ashish", "Shubham"];
+
+for (var i = 0; i < names.length; i++) {
+   console.log(names[i]);
+}
+
+
+
+
+
+Angular Life Cycle Hooks - 
+
+ngOnChanges − When the value of a data bound property changes, then this method is called.
+
+ngOnInit − This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
+
+ngDoCheck − This is for the detection and to act on changes that Angular can't or won't detect on its own.
+
+ngAfterContentInit − This is called in response after Angular projects external content into the component's view.
+
+ngAfterContentChecked − This is called in response after Angular checks the content projected into the component.
+
+ngAfterViewInit − This is called in response after Angular initializes the component's views and child views.
+
+ngAfterViewChecked − This is called in response after Angular checks the component's views and child views.
+
+ngOnDestroy − This is the cleanup phase just before Angular destroys the directive/component.
+
+
+
